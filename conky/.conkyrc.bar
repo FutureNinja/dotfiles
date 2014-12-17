@@ -1,0 +1,66 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 0.5
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+#if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 6
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar 
+
+[ 
+
+
+{"full_text" : " "},
+{ 
+          "full_text" : " public: ${execi 60 curl -p icanhazip.com} ", 
+          "min_width": 72
+        },
+{"full_text" : " local: ${addr wlan0} "},
+#{"full_text" : " quality:${wireless_link_qual_perc wlan0}% "},
+ {"full_text" : " essid: ${wireless_essid wlan0} "},
+#{"full_text" : " playing: ${exec mocp -Q %artist} - ${exec mocp -Q %title} - ${exec mocp -Q %state} <${exec mocp -Q %ct}/${exec mocp -Q %tt}> " ,"align" : "left"},
+#{"full_text" : " playing: ${moc_artist} - ${moc_title} <${moc_curtime}/${moc_totaltime}> "},
+ {"full_text" :" wlan ↓: ${downspeed wlan0} ↑: ${upspeed wlan0} "},
+ {"full_text" : " total: ${totaldown wlan0} / ${totalup wlan0} "},
+#{ "full_text" : " bat: [${battery_percent}%] / ${battery_time}" , "color" :${if_match  ${battery_percent}>20}"\#FF0000" ${endif} },
+# se metto >20 invece che < 10 funziona
+
+#$else ${if_match ${battery_percent}==0}"\#FF0000"${endif} },
+
+{"full_text" : " bat: [${battery_percent}%] / ${battery_time} "},
+#{"full_text" : " ✉: [${new_mails /home/swindler/.thunderbird/ack1zn74.default/ImapMail/imap.googlemail.com/INBOX}/${mails /home/swindler/.thunderbird/ack1zn74.default/ImapMail/imap.googlemail.com/INBOX}] "
+{"full_text" : " "}
+
+
+
+
+],
