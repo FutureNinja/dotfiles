@@ -1,0 +1,20 @@
+# Turn off that annoying start up message
+startup_message off
+ 
+# Turn the even more annoying whole-screen-flash-on-tab-complete "feature"
+vbell off
+
+#enable 356 colors
+term xterm-256color
+
+   
+# Window list at the bottom. hostname, centered tabs and redmarked active windows:
+#shelltitle '$ |'
+hardstatus alwayslastline
+
+hardstatus string '%{= kR}[ %{y}%H %{R}][%= %{= ky}%?%-Lw%?%{R}(%{R}%n*%f%t%?(%u)%?%{R})%{y}%?%+Lw%?%? %= %{R}][%{y} %D %{R}- %{y}%d%{R}/%{y}%M%{R}/%{y}%Y %{R}|| %{y} %{y}%c.%s %{R}]'
+
+defscrollback 50000
+
+#clean screen when i close vim
+altscreen on

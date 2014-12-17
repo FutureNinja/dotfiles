@@ -1,0 +1,92 @@
+! ******************************xterm*************************************************
+xterm*faceName: xft:inconsolata  
+
+
+xterm*faceSize: 9.5 
+xterm*saveLines: 2000
+xterm**VT100.Translations: #override \
+
+! ! special
+xterm*.foreground:   #000000#
+xterm*.background:   #f3f3f3
+!xterm*.cursorColor:  #707070
+
+
+!*******************************urxvt***************************************
+
+! special
+URxvt*.foreground:   #ffffff
+URxvt*.background:   #000000
+URxvt*.cursorColor:  #ffffff
+
+! black
+URxvt*.color0:       #303030
+URxvt*.color8:       #5f5f5f
+
+! red
+URxvt*.color1:       #c03000
+URxvt*.color9:       #ff3a78
+
+! green
+URxvt*.color2:       #b1d631
+URxvt*.color10:      #a6cd07
+
+! yellow
+URxvt*.color3:       #fecf35
+URxvt*.color11:      #b5c865
+
+! blue
+URxvt*.color4:       #426870
+URxvt*.color12:      #4a7781
+
+! magenta
+URxvt*.color5:       #6d506d
+URxvt*.color13:      #ff3b77
+
+! cyan
+URxvt*.color6:       #4bb5c1
+URxvt*.color14:      #4bb5c1
+
+! white
+URxvt*.color7:       #e2e2e5
+URxvt*.color15:      #e2e2e5
+
+URxvt*termName: screen-256color
+URxvt*geometry: 240x84
+URxvt*loginShell: true
+URxvt*scrollColor: #777777
+URxvt*scrollstyle: plain
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*skipScroll: true
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*scrollBar_floating: false
+URxvt*fading: 30
+URxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: true
+URxvt*mapAlert: true
+URxvt*mouseWheelScrollPage: false
+URxvt*background: Black
+URxvt*foreground: White
+URxvt*colorUL: yellow
+URxvt*underlineColor: yellow
+URxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
+URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
+URxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+URxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+URxvt*saveLines: 0
+URxvt*buffered: true
+URxvt*hold: false
+URxvt*internalBorder:
+URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+
+
+!
+!<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+!  Ctrl <KeyPress> V: insert-selection(CLIPBOARD, CUT_BUFFER0, PRIMARY)
+xterm*selectToClipboard: true
