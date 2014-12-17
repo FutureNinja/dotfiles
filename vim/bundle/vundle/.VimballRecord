@@ -1,0 +1,1 @@
+tcomment.vba: call delete('/home/swindler/.vim/bundle/vundle/doc/tcomment.txt')|call delete('/home/swindler/.vim/bundle/vundle/plugin/tcomment.vim')|call delete('/home/swindler/.vim/bundle/vundle/autoload/tcomment.vim')
