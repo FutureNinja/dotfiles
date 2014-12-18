@@ -1,1 +1,2 @@
 tcomment.vba: call delete('/home/swindler/.vim/bundle/vundle/doc/tcomment.txt')|call delete('/home/swindler/.vim/bundle/vundle/plugin/tcomment.vim')|call delete('/home/swindler/.vim/bundle/vundle/autoload/tcomment.vim')
+supertab.vmb: call delete('/home/swindler/.vim/bundle/vundle/doc/supertab.txt')|call delete('/home/swindler/.vim/bundle/vundle/plugin/supertab.vim')
