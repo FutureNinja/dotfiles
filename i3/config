@@ -188,9 +188,9 @@ mode "caps" {
 
 # color defines 
 set $bg #161616
-set $separatori #FF0022
-set $testo #d0d0d0 
-
+set $separatori #FFD700
+#set $testo #d0d0d0 
+set $testo #FFFFFF
 
 
 #set $bg     #1c1c1f

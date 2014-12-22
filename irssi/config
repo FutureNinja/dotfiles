@@ -112,24 +112,24 @@ chatnets = {
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
- # { name = "#hackerjournal"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#elettronica"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#fisica"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#hacklabproject"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#astronomia"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#debianizzati"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#programmazione"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#ubuntu"; chatnet = "azzurra"; autojoin = "Yes"; },
- # { name = "#matematica"; chatnet = "azzurra"; autojoin = "Yes"; },
-   { name = "#vim"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#hackerjournal"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#elettronica"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#fisica"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#hacklabproject"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#astronomia"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#debianizzati"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#programmazione"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#ubuntu"; chatnet = "azzurra"; autojoin = "Yes"; },
+  # { name = "#matematica"; chatnet = "azzurra"; autojoin = "Yes"; },
+  { name = "#vim"; chatnet = "azzurra"; autojoin = "Yes"; },
 
-   { name = "#vim"; chatnet = "freenode"; autojoin = "Yes"; },
-   { name = "#init1"; chatnet = "freenode"; autojoin = "Yes"; },
-   { name = "#math"; chatnet = "freenode"; autojoin = "Yes"; },
- # { name = "#towelroot"; chatnet = "freenode"; autojoin = "yes"; },
-   { name = "#livectf"; chatnet = "freenode"; autojoin = "yes"; },
- # { name = "#tinyctf"; chatnet = "freenode"; },
-   { name = "#pwning"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#vim"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#init1"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#math"; chatnet = "freenode"; autojoin = "Yes"; },
+  # { name = "#towelroot"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#livectf"; chatnet = "freenode"; autojoin = "yes"; },
+  # { name = "#tinyctf"; chatnet = "freenode"; },
+  { name = "#pwning"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -315,7 +315,7 @@ settings = {
     nick = "h00k3r";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "foxmask.theme"; };
+  "fe-common/core" = { theme = "ash.theme"; };
   "perl/core/scripts" = {
     nicklist_automode = "SCREEN";
     awl_display_key = "$Q%K|%n$H$C$S";
