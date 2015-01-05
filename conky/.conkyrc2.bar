@@ -43,19 +43,19 @@ TEXT
  
 {"full_text" : " "},
 
-{"full_text" : " cpu1: ${freq_g cpu0}Ghz  [${cpu cpu0}%]  cpu2: ${freq_g cpu0}Ghz  [${cpu cpu1}%] "},
+{"full_text" : " cpu1: [${cpu cpu0}%]  cpu2: [${cpu cpu1}%] "},
 {"full_text" : " temp: ${hwmon 0 temp 1}C° "},   
 { "full_text" : " mem: $mem/$memmax [$memperc%] " , "color" :
 ${if_match ${memperc}<85}"\#FFFFFF"${else}"\#FF0000"${endif} },
 {"full_text" : " root: ${fs_free /}/ ${fs_size /} [${fs_free_perc /}%] "},
-#{"full_text" : " home: ${fs_free /home}  / ${fs_size /home}[${fs_free_perc /home}%] "},
+{"full_text" : " home: ${fs_free /home}  / ${fs_size /home}[${fs_free_perc /home}%] "},
 #{"full_text" : " disk : ${diskio} ${diskiograph}"},
-{"full_text" : " swap: $swap/ $swapmax - [$swapperc%] "},
+#{"full_text" : " swap: $swap/ $swapmax - [$swapperc%] "},
 {"full_text" : " uptime: ${uptime_short} "},
 #{ "full_text" : " bat: [${battery_percent}%] / ${battery_time}" , "color" :${if_match ${battery_percent}>20}"\#FFFFFF"
 #${else} ${if_match ${battery_percent}==0}"\#FFFFFF"${endif} 
 #	${else} "\#ff0000"${endif} }, 
-{"full_text" : " ☊: [${exec amixer -c 1 get Master -M | grep -oE "[[:digit:]]*%"}] "}, 
+{"full_text" : " ☊: [${exec amixer -c 0 get Master -M | grep -oE "[[:digit:]]*%"}] "}, 
 { "full_text" : " ${time %a %d %b  %H:%M} "},
  {"full_text" : " "}
  
