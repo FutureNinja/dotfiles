@@ -36,11 +36,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod+F4      kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec $psst i3-dmenu-desktop
+#bindsym $mod+d exec $psst i3-dmenu-desktop
+bindsym $mod+d exec j4-dmenu-desktop
 
 
 # change focus (vim style)
@@ -187,9 +188,8 @@ mode "caps" {
 }
 
 # color defines 
-set $bg #161616
+set $bg #000000
 set $separatori #FFD700
-#set $testo #d0d0d0 
 set $testo #FFFFFF
 
 
@@ -221,10 +221,10 @@ client.urgent               $separatori $bg        $separatori         $
 # finds out, if available)
 
 bar {
-    font xft:inconsolata 7 
+    font xft:inconsolata 8 
     id bar-0
     status_command ~/.conky/.conky-i3bar2
-    position top 
+    position bottom 
     mode dock
     workspace_buttons no
     tray_output output
@@ -241,10 +241,10 @@ bar {
    }
 
 bar {
-    font xft:inconsolata 7 
+    font xft:inconsolata 8 
     id bar-1
     status_command ~/.conky/.conky-i3bar
-    position top 
+    position bottom 
     workspace_buttons yes
     #tray_output primary
 
@@ -270,7 +270,7 @@ for_window [class="Synapse"] border none
 
 
 ## Programmi
-bindsym $ms+b exec /usr/bin/google-chrome
+bindsym $ms+b exec /usr/bin/google-chrome-stable
 bindsym $ms+m exec /usr/bin/thunar
 bindsym $ms+c exec /usr/bin/thunderbird
 bindsym $ms+f exec /usr/bin/gedit
@@ -289,15 +289,15 @@ bindsym $ms+j exec ~/jdownloader/JDLauncher
 #bindsym $ms+Tab exec simpleswitcher -i3 -now -font "Inconsolata-10" -fg "#9f9f9f" -bg "#2c2c2e" -hlfg "#2c2c2e" -hlbg "#ccdc90" -o 85
 
 # Section to control the Master output
-bindSym XF86AudioRaiseVolume exec amixer -c 1 set Master 1%+
-bindSym XF86AudioLowerVolume exec amixer -c 1 set Master 1%-
-bindSym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+bindSym XF86AudioRaiseVolume exec amixer -c 0 set Master 1%+
+bindSym XF86AudioLowerVolume exec amixer -c 0 set Master 1%-
+bindSym XF86AudioMute exec amixer -D default set Master 1+ toggle
 
 bindSym $ms+w  exec amixer -D pulse set Speaker1+ toggle
 
 #Section to control the Capture (mic)
-bindSym Shift+XF86AudioRaiseVolume exec amixer -c 1 set Capture 1%+
-bindSym Shift+XF86AudioLowerVolume exec amixer -c 1 set Capture 1%-
+bindSym Shift+XF86AudioRaiseVolume exec amixer -c 0 set Capture 1%+
+bindSym Shift+XF86AudioLowerVolume exec amixer -c 0 set Capture 1%-
 bindSym Shift+XF86AudioMute exec amixer set Capture 1+ toggle
 
 # Change brightness with media keys
@@ -328,11 +328,13 @@ bindsym $mod+Pause mode "$mode_system"
 
 
 # applicazioni all'avvio
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nitrogen --restore &
-exec /usr/bin/nm-applet
-exec --no-startup-id ~/.dropbox-dist/dropboxd
+#exec /usr/bin/nm-applet
+#exec --no-startup-id dropboxd
 exec /usr/bin/xrdb -merge ~/.Xresources
 #exec /usr/bin/pa-applet
 exec /usr/bin/naturalscrolling
+exec thunar --daemon
 #exec --no-startup-id sh ~/.fehbg
 #exec --no-startup-id /usr/bin/feh --bg--scaled ~/Pictures/albert_einstein.jpg
