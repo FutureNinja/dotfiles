@@ -1,55 +1,114 @@
 ! ******************************xterm*************************************************
-xterm*faceName: xft:inconsolata  
+xterm*faceName: xft:inconsolata
 
 
-xterm*faceSize: 9.5 
+xterm*faceSize: 9.5
 xterm*saveLines: 2000
 xterm**VT100.Translations: #override \
 
-! ! special
-xterm*.foreground:   #000000#
-xterm*.background:   #f3f3f3
-!xterm*.cursorColor:  #707070
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+xterm*background:              S_base03
+xterm*foreground:              S_base0
+xterm*fading:                  40
+xterm*fadeColor:               S_base03
+xterm*cursorColor:             S_base1
+xterm*pointerColorBackground:  S_base01
+xterm*pointerColorForeground:  S_base1
+
+xterm*color0:                  S_base02
+xterm*color1:                  S_red
+xterm*color2:                  S_green
+xterm*color3:                  S_yellow
+xterm*color4:                  S_blue
+xterm*color5:                  S_magenta
+xterm*color6:                  S_cyan
+xterm*color7:                  S_base2
+xterm*color9:                  S_orange
+xterm*color8:                  S_base03
+xterm*color10:                 S_base01
+xterm*color11:                 S_base00
+xterm*color12:                 S_base0
+xterm*color13:                 S_violet
+xterm*color14:                 S_base1
+xterm*color15:                 S_base3
 
 
 !*******************************urxvt***************************************
 
-! special
-URxvt*.foreground:   #ffffff
-URxvt*.background:   #000000
-URxvt*.cursorColor:  #ffffff
+! Common
 
-! black
-URxvt*.color0:       #303030
-URxvt*.color8:       #5f5f5f
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-! red
-URxvt*.color1:       #c03000
-URxvt*.color9:       #ff3a78
 
-! green
-URxvt*.color2:       #b1d631
-URxvt*.color10:      #a6cd07
+! Dark
 
-! yellow
-URxvt*.color3:       #fecf35
-URxvt*.color11:      #b5c865
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
 
-! blue
-URxvt*.color4:       #426870
-URxvt*.color12:      #4a7781
 
-! magenta
-URxvt*.color5:       #6d506d
-URxvt*.color13:      #ff3b77
+! Light
 
-! cyan
-URxvt*.color6:       #4bb5c1
-URxvt*.color14:      #4bb5c1
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
 
-! white
-URxvt*.color7:       #e2e2e5
-URxvt*.color15:      #e2e2e5
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+URxvt*background:              S_base03
+URxvt*foreground:              S_base0
+URxvt*fadeColor:               S_base03
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color9:                  S_orange
+URxvt*color8:                  S_base03
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3
 
 URxvt*termName: screen-256color
 URxvt*geometry: 240x84
@@ -71,20 +130,25 @@ URxvt*urgentOnBell: false
 URxvt*visualBell: true
 URxvt*mapAlert: true
 URxvt*mouseWheelScrollPage: false
-URxvt*background: Black
-URxvt*foreground: White
-URxvt*colorUL: yellow
-URxvt*underlineColor: yellow
-URxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
-URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
-URxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
-URxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+!URxvt*background: Black
+!URxvt*foreground: White
+!URxvt*colorUL: yellow
+!URxvt*underlineColor: yellow
+!URxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:inconsolata:pixelsize:14
+URxvt*font:               xft:Inconsolata:style=Semibold:pixelsize=14:antialias=true:hinting=slight
+!URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:14
+Rxvt*boldFont:           xft:Inconsolata:style=bold:pixelsize=14:antialias=true:hinting=slight
+!URxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=14
+!URxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=14
 URxvt*saveLines: 0
 URxvt*buffered: true
 URxvt*hold: false
 URxvt*internalBorder:
 URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
 
 !
 !<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\

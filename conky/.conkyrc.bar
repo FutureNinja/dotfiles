@@ -44,13 +44,13 @@ TEXT
           "full_text" : " public: ${execi 60 curl -p icanhazip.com} ", 
           "min_width": 72
         },
-{"full_text" : " local: ${addr wlp1s0} "},
+{"full_text" : " local: ${addr wlp1s0b1} "},
 #{"full_text" : " quality:${wireless_link_qual_perc wlp1s0}% "},
- {"full_text" : " essid: ${wireless_essid wlp1s0} "},
+ {"full_text" : " essid: ${wireless_essid wlp1s0b1} "},
 #{"full_text" : " playing: ${exec mocp -Q %artist} - ${exec mocp -Q %title} - ${exec mocp -Q %state} <${exec mocp -Q %ct}/${exec mocp -Q %tt}> " ,"align" : "left"},
 #{"full_text" : " playing: ${moc_artist} - ${moc_title} <${moc_curtime}/${moc_totaltime}> "},
- {"full_text" :" wlan ↓: ${downspeed wlp1s0} ↑: ${upspeed wlp1s0} "},
- {"full_text" : " total: ${totaldown wlp1s0} / ${totalup wlp1s0} "},
+ {"full_text" :" wlan ↓: ${downspeed wlp1s0b1} ↑: ${upspeed wlp1s0b1} "},
+ {"full_text" : " total: ${totaldown wlp1s0b1} / ${totalup wlp1s0b1} "},
 #{ "full_text" : " bat: [${battery_percent}%] / ${battery_time}" , "color" :${if_match  ${battery_percent}>20}"\#FF0000" ${endif} },
 # se metto >20 invece che < 10 funziona
 

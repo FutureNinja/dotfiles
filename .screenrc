@@ -12,7 +12,7 @@ term xterm-256color
 #shelltitle '$ |'
 hardstatus alwayslastline
 
-hardstatus string '%{= kR}[ %{y}%H %{R}][%= %{= ky}%?%-Lw%?%{R}(%{R}%n*%f%t%?(%u)%?%{R})%{y}%?%+Lw%?%? %= %{R}][%{y} %D %{R}- %{y}%d%{R}/%{y}%M%{R}/%{y}%Y %{R}|| %{y} %{y}%c.%s %{R}]'
+hardstatus string '%{= kY}[ %{w}%H %{Y}][%= %{= kw}%?%-Lw%?%{Y}(%{W}%n*%f%t%?(%u)%?%{Y})%{w}%?%+Lw%?%? %= %{Y}][%{w} %D %{\Y}- %{w}%d%{Y}/%{w}%M%{Y}/%{w}%Y %{Y}|| %{w} %{w}%c.%s %{Y}]'
 
 defscrollback 50000
 

@@ -284,7 +284,8 @@ bindsym $ms+p exec "xrandr --output HDMI-0 --auto --left-of LVDS -s 1366x768"
 bindsym $ms+Shift+p exec "xrandr --output LVDS -s 1366x768"
 bindsym $ms+a exec x-terminal-emulator -e mocp
 bindsym $ms+n exec x-terminal-emulator -e ranger
-bindsym $ms+j exec ~/jdownloader/JDLauncher
+#bindsym $ms+j exec ~/jdownloader/JDLauncher
+bindsym $ms+j exec java -jar ~/.jd/JDownloader.jar
 
 #bindsym $ms+Tab exec simpleswitcher -i3 -now -font "Inconsolata-10" -fg "#9f9f9f" -bg "#2c2c2e" -hlfg "#2c2c2e" -hlbg "#ccdc90" -o 85
 
@@ -308,26 +309,53 @@ bindsym XF86KbdBrightnessDown exec xbacklight -dec 15
 # always open some programs on specified workspace
 #assign [class="^(?i)google-chrome"] $w6
 
+
+# set $MENU "Audacious Chromium Dolphin dOublecmd Foxit giMp Gvim Irfanview Nixnote Palemoon Qbittorrent Ranger Skype Vlc Xnview Wps Et Libreoffice"
+# bindsym Menu mode $MENU
+# mode $MENU {
+# bindsym d exec dolphin, mode, "default"
+# bindsym a exec audacious, mode "default"
+# bindsym l exec libreoffice, mode "default"
+# bindsym m exec gimp, mode "default"
+# bindsym c exec chromium, mode "default"
+# bindsym i exec irfanview,mode "default"
+# bindsym p exec palemoon, mode "default"
+# bindsym f exec foxitreader, mode "default"
+# bindsym g exec gvim, mode "default"
+# bindsym w exec wps, mode "default"
+# bindsym e exec et, mode "default"
+# bindsym q exec qbittorrent, mode "default"
+# bindsym v exec vlc, mode "default"
+# bindsym o exec doublecmd, mode "default"
+# bindsym x exec xnviewmp, mode "default"
+# bindsym r exec terminator --profile ranger, mode "default"
+# bindsym s exec skype, mode "default"
+# bindsym n exec nixnote, mode "default"
+# bindsym Return mode "default"
+# bindsym Escape mode "default"
+# }
+#
+
 #Shutdown, reboot, lock screen
-
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+Pause mode "$mode_system"
-
+# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+# mode "$mode_system" {
+#     bindsym l exec --no-startup-id i3exit lock, mode "default"
+#     bindsym e exec --no-startup-id i3exit logout, mode "default"
+#     bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#     bindsym r exec --no-startup-id i3exit reboot, mode "default"
+#     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
+#
+#     back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
+# bindsym $mod+Pause mode "$mode_system"
+#
 
 
 # applicazioni all'avvio
+exec --no-startup-id cbatticon
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nitrogen --restore &
 #exec /usr/bin/nm-applet

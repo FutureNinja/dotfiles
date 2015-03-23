@@ -38,6 +38,10 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 set laststatus=2
 set mousemodel=extend
 
+"exec panthongen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
 " Initialize vundle runtime
 set rtp+=~/.vim/bundle/vundle/
@@ -45,6 +49,9 @@ call vundle#rc()
 
 " Vundle package
 Bundle 'gmarik/vundle'
+Bundle 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+Bundle 'terryma/vim-multiple-cursors'
 
 " A file tree explorer
 Bundle 'scrooloose/nerdtree'
@@ -71,6 +78,7 @@ vnoremap <F9> zf
 " This command will override your register 'h' so you can choose other one 
 " ( by changing 'h' in the command above to other lower case letter ) that you don't use.
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+"execute pathogen#infect() 
 
 filetype indent on
 filetype plugin on
@@ -78,16 +86,22 @@ filetype plugin on
 set mouse=a
 " Force terminal to 256 colors
 set t_Co=256
-colorscheme sunburst 
+"colorscheme sunburst 
+syntax enable
+if has('gui_running')
+      set background=light
+    else
+          set background=dark
+        endif
+colorscheme solarized
 
-" Use tabs with arrow keys, Ctrl+t to open a new tab, and Ctrl+e to close it
+" Use tabs with arrow keys, Ctrl+t to open a new tab, and Ctrl+w to close it
 map <up> :tabr<cr>
 map <down> :tabl<cr>
 map <left> :tabp<cr>
 map <right> :tabn<cr>
 map <C-t> :tabnew<cr>
 map <C-e> :tabclose<cr>
-
 
 
 " setup for gui
