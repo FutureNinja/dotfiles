@@ -86,14 +86,14 @@ filetype plugin on
 set mouse=a
 " Force terminal to 256 colors
 set t_Co=256
-"colorscheme sunburst 
+colorscheme flatcolor 
 syntax enable
-if has('gui_running')
-      set background=light
-    else
-          set background=dark
-        endif
-colorscheme solarized
+"if has('gui_running')
+ "     set background=light
+  "  else
+   "       set background=dark
+    "    endif
+"colorscheme solarized
 
 " Use tabs with arrow keys, Ctrl+t to open a new tab, and Ctrl+w to close it
 map <up> :tabr<cr>
