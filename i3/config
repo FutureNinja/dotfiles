@@ -41,7 +41,7 @@ bindsym $mod+F4      kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec $psst i3-dmenu-desktop
-bindsym $mod+d exec j4-dmenu-desktop
+bindsym $mod+d exec dmenu_run -nb \$gray1 -nf \$yellow -sb \$yellow -sf \$gray1 -fn "PragmataPro-12"
 
 
 # change focus (vim style)
@@ -193,20 +193,12 @@ set $separatori #FFD700
 set $testo #FFFFFF
 
 
-#set $bg     #1c1c1f
-#set $fg     #4f4f4f
-#set $hi     #efef8f
-#set $ac     #a0afa0
-#set $tx     #040404
-#set $ia     #8f8f8f
-#set $be     #8faf9f
-#set $yw     #ccdc90
-#set $gn     #88b090
-#set $rd     #FF4500
-#set $ita    #FF0000
-#set $oran   #1c1c1f
-#set $black  #1c1c1f
-#set $wh     #808080
+set $gray1 #444444
+set $gray2 #111111
+set $gray3 #DDDDDD
+set $black #000000
+set $white #FFFFFF
+set $yellow #FFFF00
 
 font xft:WenQuanYi Micro Hei Mono 1 
 
@@ -221,7 +213,7 @@ client.urgent               $separatori $bg        $separatori         $
 # finds out, if available)
 
 bar {
-    font xft:inconsolata 8 
+    font xft:inconsolata 10 
     id bar-0
     status_command ~/.conky/.conky-i3bar2
     position bottom 
@@ -229,19 +221,17 @@ bar {
     workspace_buttons no
     tray_output output
     colors { ##            contorno sfondo testo 
-    	   background         $bg
-    	   statusline         $testo
-	   separator          $separatori
-	   focused_workspace  $bg $bg $separatori 
-	   active_workspace   $separatori $bg $separatori  
-	   inactive_workspace $bg  $bg $testo
-	   urgent_workspace   $separatori $separatori $bg 
-	   } 
+    	  	 background $gray1
+           statusline $gray3
+           active_workspace $gray3 $gray1 $gray3
+           focused_workspace $gray3 $gray1 $gray3
+           inactive_workspace $gray3 $gray1
+          } 
 
    }
 
 bar {
-    font xft:inconsolata 8 
+    font xft:inconsolata 10 
     id bar-1
     status_command ~/.conky/.conky-i3bar
     position bottom 
@@ -249,15 +239,15 @@ bar {
     #tray_output primary
 
     colors { ##            contorno sfondo testo 
-    	   background $bg
-    	   statusline $testo
-	   separator $separatori
-	   focused_workspace $bg $bg $separatori 
-	   active_workspace $separatori $bg $separatori  
-	   inactive_workspace $bg       $bg $testo
-	   urgent_workspace $separatori $separatori $bg 
-	   } 
-}
+    	       background $gray1
+           statusline $gray3
+           active_workspace $gray3 $gray1 $gray3
+           focused_workspace $gray3 $gray1 $gray3
+           inactive_workspace $gray3 $gray1
+          } 
+
+   }
+
 
 ## Ridurre ad icona
 bindsym $mod+Shift+minus move scratchpad
@@ -306,63 +296,15 @@ bindsym XF86KbdBrightnessUp exec xbacklight -inc 15
 bindsym XF86KbdBrightnessDown exec xbacklight -dec 15
 
 
-# always open some programs on specified workspace
-#assign [class="^(?i)google-chrome"] $w6
-
-
-# set $MENU "Audacious Chromium Dolphin dOublecmd Foxit giMp Gvim Irfanview Nixnote Palemoon Qbittorrent Ranger Skype Vlc Xnview Wps Et Libreoffice"
-# bindsym Menu mode $MENU
-# mode $MENU {
-# bindsym d exec dolphin, mode, "default"
-# bindsym a exec audacious, mode "default"
-# bindsym l exec libreoffice, mode "default"
-# bindsym m exec gimp, mode "default"
-# bindsym c exec chromium, mode "default"
-# bindsym i exec irfanview,mode "default"
-# bindsym p exec palemoon, mode "default"
-# bindsym f exec foxitreader, mode "default"
-# bindsym g exec gvim, mode "default"
-# bindsym w exec wps, mode "default"
-# bindsym e exec et, mode "default"
-# bindsym q exec qbittorrent, mode "default"
-# bindsym v exec vlc, mode "default"
-# bindsym o exec doublecmd, mode "default"
-# bindsym x exec xnviewmp, mode "default"
-# bindsym r exec terminator --profile ranger, mode "default"
-# bindsym s exec skype, mode "default"
-# bindsym n exec nixnote, mode "default"
-# bindsym Return mode "default"
-# bindsym Escape mode "default"
-# }
-#
-
-#Shutdown, reboot, lock screen
-# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-# mode "$mode_system" {
-#     bindsym l exec --no-startup-id i3exit lock, mode "default"
-#     bindsym e exec --no-startup-id i3exit logout, mode "default"
-#     bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
-#
-#     back to normal: Enter or Escape
-#     bindsym Return mode "default"
-#     bindsym Escape mode "default"
-# }
-# bindsym $mod+Pause mode "$mode_system"
-#
-
-
 # applicazioni all'avvio
-exec --no-startup-id cbatticon
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nitrogen --restore &
-#exec /usr/bin/nm-applet
+exec /usr/bin/nm-applet
 #exec --no-startup-id dropboxd
 exec /usr/bin/xrdb -merge ~/.Xresources
 #exec /usr/bin/pa-applet
-exec /usr/bin/naturalscrolling
+#exec /usr/bin/naturalscrolling
 exec thunar --daemon
 #exec --no-startup-id sh ~/.fehbg
-#exec --no-startup-id /usr/bin/feh --bg--scaled ~/Pictures/albert_einstein.jpg
+
+
