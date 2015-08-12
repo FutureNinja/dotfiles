@@ -8,7 +8,7 @@
 
 dir=~/dotfiles/inrace/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="i3 bashrc oh-my-zsh zshrc vimrc vim conky screenrc gitconfig Xresources"    # list of files/folders to symlink in homedir
+files="i3 bashrc oh-my-zsh zshrc vimrc vim conky screenrc gitconfig Xresources irssi"    # list of files/folders to symlink in homedir
 
 ##########
 

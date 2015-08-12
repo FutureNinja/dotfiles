@@ -31,6 +31,7 @@ set backspace=2
 set diffopt+=iwhite
 set ai
 set hlsearch
+set clipboard=unnamedplus
 highlight Comment ctermfg=green
 
 " Set the statusline
