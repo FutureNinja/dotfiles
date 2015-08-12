@@ -2,7 +2,7 @@
 xterm*faceName: xft:inconsolata
 
 
-xterm*faceSize: 9.5
+xterm*faceSize: 11
 xterm*saveLines: 2000
 xterm**VT100.Translations: #override \
 
@@ -17,30 +17,68 @@ xterm**VT100.Translations: #override \
 ! #define S_base2         #073642
 ! #define S_base3         #002b36
 
-xterm*background:              S_base03
-xterm*foreground:              S_base0
-xterm*fading:                  40
-xterm*fadeColor:               S_base03
-xterm*cursorColor:             S_base1
-xterm*pointerColorBackground:  S_base01
-xterm*pointerColorForeground:  S_base1
+! special
+xterm*foreground:   #c5c8c6
+xterm*background:   #1d1f21
+xterm*cursorColor:  #c5c8c6
 
-xterm*color0:                  S_base02
-xterm*color1:                  S_red
-xterm*color2:                  S_green
-xterm*color3:                  S_yellow
-xterm*color4:                  S_blue
-xterm*color5:                  S_magenta
-xterm*color6:                  S_cyan
-xterm*color7:                  S_base2
-xterm*color9:                  S_orange
-xterm*color8:                  S_base03
-xterm*color10:                 S_base01
-xterm*color11:                 S_base00
-xterm*color12:                 S_base0
-xterm*color13:                 S_violet
-xterm*color14:                 S_base1
-xterm*color15:                 S_base3
+! black
+xterm*color0:       #282a2e
+xterm*color8:       #373b41
+
+! red
+xterm*color1:       #a54242
+xterm*color9:       #cc6666
+
+! green
+xterm*color2:       #8c9440
+xterm*color10:      #b5bd68
+
+! yellow
+xterm*color3:       #de935f
+xterm*color11:      #f0c674
+
+! blue
+xterm*color4:       #5f819d
+xterm*color12:      #81a2be
+
+! magenta
+xterm*color5:       #85678f
+xterm*color13:      #b294bb
+
+! cyan
+xterm*color6:       #5e8d87
+xterm*color14:      #8abeb7
+
+! white
+xterm*color7:       #707880
+xterm*color15:      #c5c8c6
+
+! xterm nero su bianco
+! xterm*background:              S_base03
+! xterm*foreground:              S_base0
+! xterm*fading:                  40
+! xterm*fadeColor:               S_base03
+! xterm*cursorColor:             S_base1
+! xterm*pointerColorBackground:  S_base01
+! xterm*pointerColorForeground:  S_base1
+!
+! xterm*color0:                  S_base02
+! xterm*color1:                  S_red
+! xterm*color2:                  S_green
+! xterm*color3:                  S_yellow
+! xterm*color4:                  S_blue
+! xterm*color5:                  S_magenta
+! xterm*color6:                  S_cyan
+! xterm*color7:                  S_base2
+! xterm*color9:                  S_orange
+! xterm*color8:                  S_base03
+! xterm*color10:                 S_base01
+! xterm*color11:                 S_base00
+! xterm*color12:                 S_base0
+! xterm*color13:                 S_violet
+! xterm*color14:                 S_base1
+! xterm*color15:                 S_base3
 
 
 !*******************************urxvt***************************************
@@ -153,4 +191,4 @@ URxvt.perl-ext-common: default,clipboard
 !
 !<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
 !  Ctrl <KeyPress> V: insert-selection(CLIPBOARD, CUT_BUFFER0, PRIMARY)
-xterm*selectToClipboard: true
+xterm -ls -xrm 'XTerm*selectToClipboard: true'&
