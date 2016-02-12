@@ -133,12 +133,12 @@ channels = (
   { name = "##hacking"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##lol"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##c++"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#ada"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "##c++-general"; chatnet = "freenode"; },
-  { name = "##c++-basic"; chatnet = "freenode"; },
+  #{ name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
+  #{ name = "#ada"; chatnet = "freenode"; autojoin = "yes"; },
+  #{ name = "##c++-general"; chatnet = "freenode"; },
+  #{ name = "##c++-basic"; chatnet = "freenode"; },
   { name = "#pctf"; chatnet = "freenode"; },
-  { name = "#hackerjournal"; chatnet = "freenode"; autojoin = "yes"; }
+  #{ name = "#hackerjournal"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -318,13 +318,9 @@ statusbar = {
   };
 };
 settings = {
-  core = { 
-    real_name = "swindler";
-    user_name = "h00k3r";
-    nick = "h00k3r";
-  };
+  core = { real_name = "t0by"; user_name = "inrace"; nick = "inrace"; };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "solarized.theme"; };
+  "fe-common/core" = { theme = "initrd.theme"; };
   "perl/core/scripts" = {
     nicklist_automode = "SCREEN";
     awl_display_key = "$Q%K|%n$H$C$S";

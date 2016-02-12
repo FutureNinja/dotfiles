@@ -40,8 +40,8 @@ bindsym $mod+F4      kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-#bindsym $mod+d exec $psst i3-dmenu-desktop
-bindsym $mod+d exec dmenu_run -nb \$gray1 -nf \$yellow -sb \$yellow -sf \$gray1 -fn "PragmataPro-12"
+bindsym $mod+d exec $psst i3-dmenu-desktop
+#bindsym $mod+d exec dmenu_run -nb \$gray1 -nf \$yellow -sb \$yellow -sf \$gray1 -fn "PragmataPro-12"
 
 
 # change focus (vim style)
@@ -192,10 +192,9 @@ set $bg #000000
 set $separatori #FFD700
 set $testo #FFFFFF
 
-
-set $gray1 #444444
+set $gray1 #282A2E   
 set $gray2 #111111
-set $gray3 #DDDDDD
+set $gray3 #707880
 set $black #000000
 set $white #FFFFFF
 set $yellow #FFFF00
@@ -239,7 +238,7 @@ bar {
     #tray_output primary
 
     colors { ##            contorno sfondo testo 
-    	       background $gray1
+    	      background $gray1
            statusline $gray3
            active_workspace $gray3 $gray1 $gray3
            focused_workspace $gray3 $gray1 $gray3
@@ -300,7 +299,7 @@ bindsym XF86KbdBrightnessDown exec xbacklight -dec 15
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nitrogen --restore &
 exec /usr/bin/nm-applet
-#exec --no-startup-id dropboxd
+exec --no-startup-id "dropbox start"
 exec /usr/bin/xrdb -merge ~/.Xresources
 #exec /usr/bin/pa-applet
 #exec /usr/bin/naturalscrolling
